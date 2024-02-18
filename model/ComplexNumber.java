@@ -1,9 +1,11 @@
 package model;
 
-public class ComplexNumber {
-    private int real, imaginary;
+import java.text.DecimalFormat;
 
-    public ComplexNumber(int real, int imaginary) {
+public class ComplexNumber {
+    private double real, imaginary;
+
+    public ComplexNumber(double real, double imaginary) {
         this.real = real;
         this.imaginary = imaginary;
     }
@@ -12,27 +14,28 @@ public class ComplexNumber {
         this(0, 0);
     }
 
-    public int getReal() {
+    public double getReal() {
         return real;
     }
 
-    public int getImaginary() {
+    public double getImaginary() {
         return imaginary;
     }
 
-    public void setReal(int real) {
+    public void setReal(double real) {
         this.real = real;
     }
 
-    public void setImaginary(int imaginary) {
+    public void setImaginary(double imaginary) {
         this.imaginary = imaginary;
     }
 
     @Override
     public String toString() {
+        DecimalFormat df = new DecimalFormat("#.######");
         if (imaginary >= 0) {
-            return String.format("%s + %si", real, imaginary);
+            return String.format("%s + %si", df.format(real), df.format(imaginary));
         }
-        return String.format("%s - %si", real, -imaginary);
+        return String.format("%s - %si", df.format(real), df.format(imaginary));
     }
 }

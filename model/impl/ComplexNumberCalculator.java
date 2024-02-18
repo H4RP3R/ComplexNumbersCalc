@@ -20,7 +20,7 @@ public class ComplexNumberCalculator extends Calculator<ComplexNumber> {
 
     public ComplexNumber divide(ComplexNumber a, ComplexNumber b) {
         ComplexNumber cNum = new ComplexNumber();
-        int divisor = b.getReal() * b.getReal() + b.getImaginary() * b.getImaginary();
+        double divisor = b.getReal() * b.getReal() + b.getImaginary() * b.getImaginary();
         cNum.setReal((a.getReal() * b.getReal() + a.getImaginary() * b.getImaginary()) / divisor);
         cNum.setImaginary((a.getImaginary() * b.getReal() - a.getReal() * b.getImaginary()) / divisor);
         return cNum;

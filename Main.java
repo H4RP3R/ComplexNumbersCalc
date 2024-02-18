@@ -14,6 +14,6 @@ public class Main {
 
         UI UI = new UI(calcController, new InputUtil(new Scanner(System.in)));
         UI.run();
-        // TODO: error exceptions, logging
+        // TODO: exceptions, logging, CHECK DOUBLES!!!, fix toString with double minus!
     }
 }
