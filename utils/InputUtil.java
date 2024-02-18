@@ -30,11 +30,11 @@ public class InputUtil {
 
     public Character getOperator() {
         Scanner in = new Scanner(System.in);
-        System.out.print("Enter the math operation (*, +, /, -) : ");
+        System.out.print("Введите математическую операцию (*, +, /, -) : ");
         String operator = in.nextLine();
         while (true) {
             if (isInvalidOperator(operator)) {
-                System.err.println("Entered invalid math operator. " + "Enter the math operation (*, +, /, -) : ");
+                System.err.println("Введен неверный математический оператор. " + "Валидные операции (*, +, /, -) : ");
                 operator = in.nextLine();
             } else
                 return operator.charAt(0);
