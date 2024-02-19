@@ -1,5 +1,6 @@
 package view;
 
+import java.util.InputMismatchException;
 import java.util.logging.Logger;
 
 import controller.CalcController;
@@ -25,8 +26,10 @@ public class UI {
                 ComplexNumber b = input.getComplexNum();
                 var result = calcController.process(a, b, op);
                 System.out.println(result);
-            } catch (Exception e) {
+            } catch (InputMismatchException e) {
+                logger.warning(e.toString());
                 input.clear();
+            } catch (ArithmeticException e) {
                 logger.warning(e.toString());
             }
         }

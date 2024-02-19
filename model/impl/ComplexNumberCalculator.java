@@ -30,6 +30,10 @@ public class ComplexNumberCalculator extends Calculator<ComplexNumber> {
     }
 
     public ComplexNumber divide(ComplexNumber a, ComplexNumber b) {
+        if (b.getReal() == 0 && b.getImaginary() == 0) {
+            throw new ArithmeticException("Division by zero");
+        }
+
         ComplexNumber cNum = new ComplexNumber();
         double divisor = b.getReal() * b.getReal() + b.getImaginary() * b.getImaginary();
         cNum.setReal((a.getReal() * b.getReal() + a.getImaginary() * b.getImaginary()) / divisor);
