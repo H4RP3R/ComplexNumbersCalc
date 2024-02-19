@@ -44,4 +44,8 @@ public class InputUtil {
     private boolean isInvalidOperator(String operator) {
         return !validOperators.contains(operator);
     }
+
+    public void clear() {
+        this.in.next();
+    }
 }
