@@ -26,6 +26,5 @@ public class Main {
 
         UI UI = new UI(calcController, new InputUtil(new Scanner(System.in)), calcLogger);
         UI.run();
-        // TODO: CHECK DOUBLES!!!, fix toString with double minus!
     }
 }

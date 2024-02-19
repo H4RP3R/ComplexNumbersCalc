@@ -36,6 +36,6 @@ public class ComplexNumber {
         if (imaginary >= 0) {
             return String.format("%s + %si", df.format(real), df.format(imaginary));
         }
-        return String.format("%s - %si", df.format(real), df.format(imaginary));
+        return String.format("%s - %si", df.format(real), df.format(-imaginary));
     }
 }
