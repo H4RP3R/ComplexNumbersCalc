@@ -13,9 +13,6 @@ import model.ComplexNumber;
 import model.impl.ComplexNumberCalculator;
 import view.UI;
 
-/**
- * AppRunner
- */
 public class AppRunner {
     public static void run() throws SecurityException, IOException {
         final Logger calcLogger = Logger.getLogger(UI.class.getName());
@@ -28,7 +25,7 @@ public class AppRunner {
         Calculator<ComplexNumber> calc = new ComplexNumberCalculator(calcLogger);
         CalcController<ComplexNumber> calcController = new CalcController<>(calc);
 
-        UI UI = new UI(calcController, new InputUtil(new Scanner(System.in)), calcLogger);
-        UI.run();
+        UI ui = new UI(calcController, new InputUtil(new Scanner(System.in)), calcLogger);
+        ui.run();
     }
 }
