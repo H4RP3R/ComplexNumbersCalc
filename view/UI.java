@@ -19,6 +19,7 @@ public class UI {
     }
 
     public void run() {
+        System.out.println("\nctrl+C чтобы выйти\n");
         while (true) {
             try {
                 ComplexNumber a = input.getComplexNum();
